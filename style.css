@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container{
+    text-align: center;
+    border: 5px double black;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.input-controls,.todo-list{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 1rem;
+}
+
+.input-controls input{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.add-btn{
+    background-color: hsl(120, 100%, 25%);
+}
+
+.add-btn,.dlt-btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.add-btn:hover{
+   background-color: hsl(120, 100%, 30%)
+}
+
+.add-btn:active{
+   background-color: hsl(120, 100%, 35%)
+}
+
+.todo-list {
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.dlt-btn{
+    background-color: hsl(0, 100%, 50%);
+}
+
+.dlt-btn:hover{
+    background-color: hsl(0, 100%, 55%);
+}
+
+.dlt-btn:active{
+    background-color: hsl(0, 100%, 60%);
+}
