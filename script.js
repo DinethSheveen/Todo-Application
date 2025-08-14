@@ -34,7 +34,7 @@ function renderTask(){
                                     <div>
                                         ${todoList[i].date}
                                     </div>
-                                    <button class="dlt-btn">
+                                    <button class="dlt-btn" onclick="deleteTask(${i})">
                                       Delete  
                                     </button>
                                     `
@@ -42,4 +42,7 @@ function renderTask(){
 }
 
 
-function deleteTask(){}
+function deleteTask(index){
+    todoList.splice(index,1);
+    renderTask()
+}
