@@ -1,7 +1,9 @@
 const task = document.querySelector(".task-input")
 const date = document.querySelector(".date-input")
+const message = document.querySelector(".msg");
 const todoSection = document.querySelector(".todo-list")
 const addButton = document.querySelector(".add-btn")
+
 
 addButton.addEventListener("click",()=>{
     addTask()
@@ -19,10 +21,21 @@ let todoList = [
 ] 
 
 function addTask(){
-    if(task.value.trim() === ""){
+    if(task.value.trim() === "" || date.value===""){
+        message.classList.remove("no-error")
+        message.classList.add("error")
+        message.innerHTML = "Fill both input fields please";
         return
     }
     else{
+
+        message.classList.remove("error")
+        message.classList.add("no-error")
+        message.innerHTML = "Todo succesfully added";
+
+        setTimeout(()=>{
+            message.innerHTML = ""
+        },2000)
 
         todoList.push({
             task : task.value,
