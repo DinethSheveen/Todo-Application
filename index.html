@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo Application</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <!--TODO CONTAINER-->
+    <div class="todo-container">
+        <h1>Todo List</h1>
+       
+        <!-- INPUT SECTION-->
+        <div class="input-controls">
+            <input type="text" placeholder="Enter your task here..." class="task-input" required>
+            <input type="date" class="date-input" required>
+            <button class="add-btn" onclick="addTask()">Add</button>
+        </div>
+        
+        <!-- SECTION WHERE ALL THE TASKS ARE DISPLAYED-->
+        <div class="todo-list">
+
+        </div>
+    </div>
 </body>
 </html>
