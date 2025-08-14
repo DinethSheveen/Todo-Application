@@ -2,7 +2,16 @@ const task = document.querySelector(".task-input")
 const date = document.querySelector(".date-input")
 const todoSection = document.querySelector(".todo-list")
 
-let todoList = [] 
+let todoList = [
+    {
+        task : "Make Dinner",
+        date : "2025-08-29"
+    },
+    {
+        task : "Learn to Code",
+        date : "2025-05-29"
+    }
+] 
 
 function addTask(){
     if(task.value.trim() === ""){
@@ -64,3 +73,5 @@ function deleteTask(index){
     todoList.splice(index,1);
     renderTask()
 }
+
+renderTask()
