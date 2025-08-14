@@ -4,10 +4,42 @@ const todoSection = document.querySelector(".todo-list")
 
 let todoList = [] 
 
-function addTask(){}
+function addTask(){
+    if(task.value.trim() === ""){
+        return
+    }
+    else{
+
+        todoList.push({
+            name : task.value,
+            date : date.value 
+        })
+
+        renderTask()
+
+        task.value = "";
+        date.value = "";
+    }
+}
  
 
-function renderTask(){}
+function renderTask(){
+    todoSection.innerHTML = ""
+
+    for(let i=0;i<todoList.length;i++){
+        todoSection.innerHTML +=    `
+                                    <div>
+                                        ${todoList[i].name}
+                                    </div>
+                                    <div>
+                                        ${todoList[i].date}
+                                    </div>
+                                    <button class="dlt-btn">
+                                      Delete  
+                                    </button>
+                                    `
+    }
+}
 
 
 function deleteTask(){}
