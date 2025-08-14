@@ -11,7 +11,7 @@ function addTask(){
     else{
 
         todoList.push({
-            name : task.value,
+            task : task.value,
             date : date.value 
         })
 
@@ -26,19 +26,37 @@ function addTask(){
 function renderTask(){
     todoSection.innerHTML = ""
 
-    for(let i=0;i<todoList.length;i++){
+
+    todoList.forEach((todoObject,index)=>{
+
+        const {task,date} = todoObject;
+
         todoSection.innerHTML +=    `
                                     <div>
-                                        ${todoList[i].name}
+                                        ${task}
                                     </div>
                                     <div>
-                                        ${todoList[i].date}
+                                        ${date}
                                     </div>
-                                    <button class="dlt-btn" onclick="deleteTask(${i})">
-                                      Delete  
+                                    <button class="dlt-btn" onclick="deleteTask(${index})">
+                                        Delete
                                     </button>
                                     `
-    }
+    })
+
+    // for(let i=0;i<todoList.length;i++){
+    //     todoSection.innerHTML +=    `
+    //                                 <div>
+    //                                     ${todoList[i].name}
+    //                                 </div>
+    //                                 <div>
+    //                                     ${todoList[i].date}
+    //                                 </div>
+    //                                 <button class="dlt-btn" onclick="deleteTask(${i})">
+    //                                   Delete  
+    //                                 </button>
+    //                                 `
+    // }
 }
 
 
