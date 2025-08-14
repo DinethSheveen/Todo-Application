@@ -69,3 +69,18 @@ body{
 .dlt-btn:active{
     background-color: hsl(0, 100%, 60%);
 }
+
+.msg{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem;
+}
+
+.error{
+    color: red;
+}
+
+.no-error{
+    color: green;
+}
