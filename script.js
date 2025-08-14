@@ -1,6 +1,11 @@
 const task = document.querySelector(".task-input")
 const date = document.querySelector(".date-input")
 const todoSection = document.querySelector(".todo-list")
+const addButton = document.querySelector(".add-btn")
+
+addButton.addEventListener("click",()=>{
+    addTask()
+})
 
 let todoList = [
     {
